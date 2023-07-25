@@ -2,24 +2,21 @@
 
 # JupyterLab Environment for Statistical Analysis using R
 
-This project provides a pre-configured Docker image to effortlessly run JupyterLab with R as the default language. The image includes essential dependencies, R installation, and popular packages like tidyverse, ggplot2, dplyr, and tidyr for seamless data manipulation and analysis. Your notebooks will be stored in the 'notebooks' directory, ensuring organized work. Enjoy a hassle-free, reproducible, and isolated environment for your data science tasks!
+This project provides a pre-configured Docker image to effortlessly run JupyterLab with R as the default language. The image includes essential dependencies, R installation, and popular packages like `tidyverse`, `ggplot2`, `dplyr`, and `BiocManager` for seamless data manipulation and analysis. Your notebooks will be stored in the 'notebooks' directory, ensuring organized work. Enjoy a hassle-free, reproducible, and isolated environment for your data science tasks!
 
 ## Table of Contents
-<details>
-  <summary>Open the Table of Contents</summary>
-  <ol>
-    <li><a href="#getting-started">Getting Started</a></li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#versioning">Versioning</a></li>
-    <li><a href="#license">License</a></li>
-  </ol>
-</details>
+<ol>
+  <li>
+    <a href="#getting-started">Getting Started</a>
+    <ul>
+      <li><a href="#prerequisites">Prerequisites</a></li>
+      <li><a href="#installation">Installation</a></li>
+    </ul>
+  </li>
+  <li><a href="#pre-installed-r-packages">Pre-installed R Packages</a></li>
+  <li><a href="#versioning">Versioning</a></li>
+  <li><a href="#license">License</a></li>
+</ol>
 
 ## Getting Started
 
@@ -97,11 +94,19 @@ Enjoy your productive data science journey with the **JupyterLab Environment for
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Pre-installed R Packages
+
+- tidyverse
+- ggplot2
+- dplyr
+- tidyr
+- stringr
+- BiocManager
+
 ## Versioning
 
 [Semantic Versioning](http://semver.org/) is used for versioning. For the versions
-available, see the [tags on this
-repository](https://gitlab.com/SamThilmany/jupyterlab-with-r-docker/-/tags).
+available, see the [Releases](https://github.com/SamThilmany/JupyterLab-with-R--Docker-Environment/releases).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
