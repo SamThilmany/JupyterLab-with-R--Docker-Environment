@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  jupyter:
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - ../notebooks:/app/notebooks  # Mount a local folder to store notebooks
+    environment:
+      - TZ=UTC+1  # Set the container timezone
