@@ -64,7 +64,7 @@ Click "Clone".
 Build the Docker image:
 
 ```bash
-cd /Users/your_username/path_to_install/jupyterlab-with-r-docker
+cd /Users/your_username/path_to_install/JupyterLab-with-R--Docker-Environment/docker
 
 docker-compose build
 ```
@@ -72,7 +72,7 @@ docker-compose build
 #### Step 3: Run the Docker Container
 
 ```bash
-cd /Users/your_username/path_to_install/jupyterlab-with-r-docker
+cd /Users/your_username/path_to_install/JupyterLab-with-R--Docker-Environment/docker
 
 docker-compose up
 ```
@@ -88,7 +88,7 @@ Congratulations! You now have a fully functional JupyterLab environment with R a
 #### Additional Notes
 - To stop the JupyterLab session and the Docker container, press `Ctrl + C` on Windows and `CMD + C` on macOS in the terminal where the container is running or click the "Stop"-button on the "Containers" pane in the Docker Desktop app.
 - To start the container again in the future, repeat Step 3 or click the "Play"-button on the "Containers" pane in the Docker Desktop app.
-- Your notebooks will be saved in the `/Users/your_username/path_to_install/jupyterlab-with-r-docker/notebooks/` directory on your local machine, enabling easy access and collaboration.
+- Your notebooks will be saved in the `/Users/your_username/path_to_install/JupyterLab-with-R--Docker-Environment/notebooks/` directory on your local machine, enabling easy access and collaboration.
 
 Enjoy your productive data science journey with the **JupyterLab Environment for Statistical Analysis using R**! If you encounter any issues or have any questions, please feel free to reach out via GitLab Issues. Happy coding!
 
