@@ -22,9 +22,13 @@ RUN apt-get update && apt-get install -y \
 RUN R -e "install.packages('IRkernel', repos = 'http://cran.us.r-project.org')" && \
     R -e "IRkernel::installspec()"
 
+# Install JupyterLab packages
+RUN R -e "install.packages('IRdisplay')"
+
 # Install some common R packages for statistical analysis
 RUN R -e "install.packages('tidyverse')" && \
     R -e "install.packages('ggplot2')" && \
+    R -e "install.packages('showtext')" && \
     R -e "install.packages('dplyr')" && \
     R -e "install.packages('tidyr')" && \
     R -e "install.packages('stringr')" && \

@@ -69,6 +69,8 @@ cd /Users/your_username/path_to_install/JupyterLab-with-R--Docker-Environment/do
 docker-compose build
 ```
 
+This step will take a few minutes, so feel free to grab a cup of coffee... ☕️
+
 #### Step 3: Run the Docker Container
 
 ```bash
@@ -98,6 +100,7 @@ Enjoy your productive data science journey with the **JupyterLab Environment for
 
 - tidyverse
 - ggplot2
+- showtext
 - dplyr
 - tidyr
 - stringr
