@@ -95,7 +95,7 @@ RUN R -e "install.packages(c( \
 ))"
 
 RUN R -e "devtools::install_github('YuLab-SMU/ggtree')"
-RUN R -e "devtools::install_bitbucket('ibi_group/disgenet2r')"
+RUN R -e "devtools::install_gitlab('medbio/disgenet2r')"
 
 # Install Bioconductor packages
 RUN R -e "BiocManager::install(c( \
