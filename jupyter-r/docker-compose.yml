@@ -8,6 +8,6 @@ services:
     volumes:
       - ../notebooks:/app/notebooks  # Mount a local folder to store notebooks
     environment:
-      - TZ=UTC+1  # Set the container timezone
+      - TZ=Europe/Berlin  # Set the container timezone
     image: jupyter_r
     container_name: jupyter_r
