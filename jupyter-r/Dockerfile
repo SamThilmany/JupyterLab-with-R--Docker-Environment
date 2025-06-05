@@ -11,6 +11,7 @@ RUN apt-get install -y --no-install-recommends \
 
 RUN apt-get install -y --no-install-recommends \
         mono-mcs \
+        mono-xbuild \
         mono-devel \
         mono-complete \
         nodejs \
@@ -68,7 +69,7 @@ RUN R -e "if (!requireNamespace('MSstatsTMT')) { BiocManager::install('MSstatsTM
 
 RUN R -e "tools::R_user_dir('rawrr', which = 'cache')"
 RUN R -e "rawrr::installRawFileReaderDLLs()"
-RUN R -e "rawrr::buildRawrrExe()"
+RUN R -e "rawrr::installRawrrExe()"
 
 # Expose the Jupyter Notebook port
 EXPOSE 8888
@@ -77,8 +78,14 @@ EXPOSE 8888
 RUN mkdir -p /etc/jupyter
 
 # Add JupyterLab configuration to save notebooks in /app/notebooks
-RUN echo "c.NotebookApp.notebook_dir = '/app/notebooks'" >> /etc/jupyter/jupyter_lab_config.py
-RUN echo "c.MappingKernelManager.kernel_cmd_timeout = 3600" >> /etc/jupyter/jupyter_notebook_config.py
+RUN echo "c.ServerApp.root_dir = '/app/notebooks'" >> /etc/jupyter/jupyter_server_config.py
+
+# Add JupyterLab configuration to remove token
+#
+# Caution: This is a security hazard.
+# Remove these lines if you're running the container remotely!
+RUN echo "c.ServerApp.token = ''" >> /etc/jupyter/jupyter_server_config.py && \
+    echo "c.ServerApp.password = ''" >> /etc/jupyter/jupyter_server_config.py
 
 # Command to run Jupyter Notebook
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]

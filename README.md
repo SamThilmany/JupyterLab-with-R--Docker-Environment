@@ -4,7 +4,7 @@
     <h1>JupyterLab R Environment</h1>
     <h4>A Docker Environment for Statistical Analysis using R in JupyterNotebooks</h4>
     <p>
-        <img src="https://img.shields.io/badge/Version:-2.0.0-green" alt="Version 2.0.0" />
+        <img src="https://img.shields.io/badge/Version:-2.0.0-green" alt="Version 2.0.1" />
     </p>
 </div>
 
@@ -64,13 +64,12 @@ If the process fails, you can simply enter the `build` command again. All packag
 Still in the `jupyter_r` directory, run:
 
 ```bash
-docker compose up
+docker compose up -d
 ```
 
 #### Step 4: Access JupyterLab
-Copy the URL from the terminal output into the adress bar of your favourite browser.
-
-The URL has a format like `http://127.0.0.1:8888/lab?token=14a67f16044064336d2c86c55a48c3c44a815c080cb5584e`.
+Open your favourite web browser and enter the following URL into the adress bar:
+- `http://127.0.0.1:8888/`
 
 #### Step 5: Start Exploring
 Congratulations! You now have a fully functional JupyterLab environment with R as the default language. Start creating new notebooks, analyzing data, and utilizing the power of R and its rich ecosystem of packages.
